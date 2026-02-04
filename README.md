@@ -33,7 +33,7 @@
 
 ## Startup de projeto
 
-```
+```md
 node: 22.14.0
 npm: 11.7.0
 ```
@@ -60,7 +60,7 @@ npm run dev
 - Uma rodada/round é definida a partir do momento em que duas cartas do jogo são selecionadas. Uma rodada é concluída toda vez que o usuário escolhe duas cartas
 - O jogo finaliza quando todas as cartas estiverem visíveis
 - Uma jogada é considera inválida toda vez que o par de cartas exibido é diferente
-- As cardas de uma jogada inválida devem ser escondidas apos a finalização da rodada
+- As carts de uma jogada inválida devem ser escondidas apos a finalização da rodada
 - Apenas uma carta por vez deve ser exibida por jogada
 - Não deve ser possível jogar sem entrar com um nome
 - Não deve ser possível uma partidas só pode começar com um jogador registro. Partidas sem jogador devem ser invalidadas
