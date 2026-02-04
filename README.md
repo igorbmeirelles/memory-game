@@ -14,13 +14,13 @@
 
 ## Startup de projeto
 
-``sh
+```sh
 npm install
-``
+```
 
-``sh
+```sh
 npm run dev
-``
+```
 
 ## Requisitos funcionais
 
@@ -183,4 +183,4 @@ Responsável pelos componentes globais da aplicação
 
 ### Models
 
-Responsável pelas entidades utilizadas na aplicação. Para este jogo apenas a class `Card.ts` foi utilizada. ela é responsável por ter as informações de um card do jogo da memoria, optou-se por utilizar classe para que a logica de exibição `showCard`/`hideCard` no escopo de fora dos parâmetros que constituem um card, respeitando assim o encapsulamento`
+Responsável pelas entidades utilizadas na aplicação. Para este jogo apenas a class `Card.ts` foi utilizada. ela é responsável por ter as informações de um card do jogo da memoria, optou-se por utilizar classe para que a logica de exibição `showCard`/`hideCard` não ficasse de fora do escopo dos parâmetros que constituem um card, respeitando assim o encapsulamento`
