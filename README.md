@@ -114,18 +114,18 @@ Responsável por exibir a tela de registro: (input com nome de usuário), dar in
 
 rota responsável pela logica e usabilidade do jogo. protegida pela variável `currentPlayerName` existente na store de player, caso a mesma não tenha preenchimento o método `beforeEach`do vue router vai redirecionar o usuário para a tela principal
 
-### Stores
+## Stores
 
 Foi utilizado o pinia para gerenciamento de estado global da aplicação com dois módulos de state o `player` e o `game`
 
-#### Player
+### Player
 
 Responsável por guardar as variáveis que estão relacionadas com o usuário como:
 
 - nome do usuário que está jogando (`currentPlayerName`)
 - ranking de jogadas (`ranking`) que deve ser acessado utilizando a o getter `rankingOrdered` para exibição de jogos ordenados
 
-#### Game
+### Game
 
 Responsável por toda a regra de negocio do jogo como:
 
@@ -135,7 +135,7 @@ Responsável por toda a regra de negocio do jogo como:
 
 - Logica de igualdade de cartas: Caso todas as cartas da variável `chosenCads` sejam diferentes a logica dispara um `setTimeout` para esconder as cartas exibidas anteriormente, isso para que o jogador possa ter tempo para ler o par de cartas que foi mostrado incorretamente. Caso as cartas sejam iguais ele deixa a exibição do jogo em amostra
 
-### Pages
+## Pages
 
 Nessa pasta se encontram as views/pages do jogo em questão. As pages são responsáveis por conter todos os componentes que são exibidos por uma pagina.
 
@@ -143,13 +143,13 @@ Na aplicação foram utilizadas duas paginas: `HomeView` e `GameView` cada um co
 
 Uma observação é que a logica de puxar um jogo ganho para o ranking está dentro da page `GameView`, foi utilizado um hook `watch` para monitorar a variável `endGame` da store de game e quando o fim do jogo é atingido (todas as cartas são exibidas) é chamada a action `addPlayerToRanking` da store de player com as informações de jogador e o array de ranking é incrementado
 
-### Componentes
+## Componentes
 
 Foram divididos em componentes globais da ui `/componentes/ui` e componentes de tela `/componentes/:name`
 
 Divididos em alguns módulos:
 
-#### /memory-board
+### /memory-board
 
 Os componentes que sao exibidos no tabuleiro do jogo como:
 
@@ -157,14 +157,14 @@ Os componentes que sao exibidos no tabuleiro do jogo como:
 - Header de contador e exibição de jogador (`MemoryCounter.vue`)
 - Mensagem de jogo vencido e seus controles (botões) (`WinnerMessage.vue`)
 
-#### /player-selection
+### /player-selection
 
 Responsável pela seção de escolha de jogador:
 
 - Titulo de exibição do nome do jogo com instruções (`TitlePlayerSelection.vue`)
 - Inputs e botões utilizados estão dentro do (`CardPlayerSelection.vue`) e são componentes globais da aplicação
 
-#### /ranking
+### /ranking
 
 Responsável pela exibição do ranking na tela
 
@@ -178,7 +178,7 @@ Responsável pela exibição do ranking na tela
 
 - `RankingCard.vue`: orquestra os componentes  `PlayerRanking.vue`, `Position.vue`, `ScoreRanking.vue` e a estilização de sua exibição
 
-#### /ui
+### /ui
 
 Responsável pelos componentes globais da aplicação
 
@@ -186,6 +186,6 @@ Responsável pelos componentes globais da aplicação
 
 - `ButtonApp.vue`: guarda o botão da aplicação e suas varições `primary` ou secondary, sendo estilizado em acordo com a variação escolhida.
 
-### Models
+## Models
 
 Responsável pelas entidades utilizadas na aplicação. Para este jogo apenas a class `Card.ts` foi utilizada. ela é responsável por ter as informações de um card do jogo da memoria, optou-se por utilizar classe para que a logica de exibição `showCard`/`hideCard` não ficasse de fora do escopo dos parâmetros que constituem um card, respeitando assim o encapsulamento`
