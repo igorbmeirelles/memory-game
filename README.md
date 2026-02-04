@@ -1,5 +1,24 @@
 # Projeto de jogo da memória
 
+- [Hospedado em](#hospedado-em)
+- [Bibliotecas](#bibliotecas)
+- [Startup de projeto](#startup-de-projeto)
+- [Requisitos funcionais](#requisitos-funcionais)
+- [Regras de negócio](#regras-de-negocio)
+- [Casos de uso](#casos-de-uso)
+  - [Registar jogador](#registar-jogador)
+  - [Começar Partida](#começar-partida)
+  - [Selecionar Jogada](#selecionar-jogada)
+  - [Verificar jogada valida](#verificar-jogada-valida)
+  - [Encerrar o jogo](#encerrar-o-jogo)
+  - [Resetar um jogo](#resetar-um-jogo)
+  - [Escolher novo jogador](#escolher-novo-jogador)
+  - [Ranking de partidas](#ranking-de-partidas)
+- [Rotas da aplicação](#rotas-da-aplicação)
+- [Stores](#stores)
+- [Componentes](#componentes)
+- [Models](#models)
+
 ## Hospedado em
 
 [https://memorygame.igormeirelles.dev/](https://memorygame.igormeirelles.dev/)
@@ -188,4 +207,7 @@ Responsável pelos componentes globais da aplicação
 
 ## Models
 
-Responsável pelas entidades utilizadas na aplicação. Para este jogo apenas a class `Card.ts` foi utilizada. ela é responsável por ter as informações de um card do jogo da memoria, optou-se por utilizar classe para que a logica de exibição `showCard`/`hideCard` não ficasse de fora do escopo dos parâmetros que constituem um card, respeitando assim o encapsulamento`
+Responsável pelas entidades utilizadas na aplicação.
+
+`Card.ts`:
+ ela é responsável por conter as informações de um card do jogo da memoria, optou-se por utilizar classe para que a logica de exibição `showCard`/`hideCard` não ficasse de fora do escopo dos parâmetros que constituem um card, respeitando assim o encapsulamento`
