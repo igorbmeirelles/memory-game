@@ -6,6 +6,7 @@
       :position="index + 1"
       :player="player.name"
       :score="player.steps"
+      :animation-delay="`${index * 0.2}s`"
     />
   </section>
 </template>

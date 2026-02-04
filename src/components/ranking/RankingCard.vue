@@ -1,5 +1,5 @@
 <template>
-  <div class="ranking__card">
+  <div class="ranking__card" :style="{ '--animation-delay': animationDelay }">
     <PositionRanking :value="position" />
     <PlayerRanking :value="player" />
     <ScoreRanking :value="score" />
@@ -15,9 +15,10 @@ interface IProps {
   position: number;
   player: string;
   score: number;
+  animationDelay?: string;
 }
 
-defineProps<IProps>();
+withDefaults(defineProps<IProps>(), { animationDelay: "0" });
 </script>
 
 <style scoped>
@@ -38,6 +39,10 @@ defineProps<IProps>();
   transition:
     transform 0.2s ease,
     filter 0.2s ease;
+
+  animation: slideLeft forwards 1s;
+  opacity: 0;
+  animation-delay: var(--animation-delay);
 }
 
 @media (min-width: 768px) {

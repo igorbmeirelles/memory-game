@@ -57,6 +57,9 @@ function startGame() {
   padding: 1rem;
 
   border-radius: 0.5rem;
+
+  opacity: 0;
+  animation: slideUp forwards 1s;
 }
 
 @media (max-width: 360px) {
