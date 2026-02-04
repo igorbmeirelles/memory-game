@@ -14,6 +14,11 @@
 
 ## Startup de projeto
 
+```
+node: 22.14.0
+npm: 11.7.0
+```
+
 ```sh
 npm install
 ```
