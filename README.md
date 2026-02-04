@@ -14,6 +14,7 @@
   - [Resetar um jogo](#resetar-um-jogo)
   - [Escolher novo jogador](#escolher-novo-jogador)
   - [Ranking de partidas](#ranking-de-partidas)
+- [Estilização](#estilização)
 - [Rotas da aplicação](#rotas-da-aplicação)
 - [Stores](#stores)
 - [Componentes](#componentes)
@@ -118,6 +119,18 @@ Ao escolher a opção de novo jogador deve ser direcionado para a tela inicial d
 O sistema deve exibir na tela principal o ranking de jogadores em ordem crescente do jogador com menos jogadas para o jogador com mais jogadas
 
 O ranking deve mostrar a posição, nome e quantidade de rounds realizados
+
+## Estilização
+
+As cores da aplicação foram inspiradas no site do vuejs gradientes, backgrounds, e cores de texto foram emprestadas da paleta de cores do vue. As variáveis de cores foram transformadas em variáveis globais css de forma que pudessem ser reaproveitadas em alguns componentes. Elementos globais da aplicação tiveram seus próprios componentes e variações como exemplo o botão que pode ser primary ou secondary.
+
+Sobre estilização muito ainda poderia ter sido explorado como padrões de tamanho de fontes, espaçamentos padrões tudo isso poderia estar definido dentro de uma variável global para ser usada na aplicação.
+
+Foi utilizado algumas classes utilitárias para simplificar acesso a css de forma mais rápido como margin e paddings.
+
+Foi utilizado o padrão `BEM` de nomenclatura de classes para os diferentes tipos de elementos.
+
+As regras de espeçamento, ainda que não padronizadas seguiram um padrão de serem sempre múltiplos de 2px (utilizado o equivalente em rem) para paddings e margins.
 
 ## Segurança da aplicação
 
